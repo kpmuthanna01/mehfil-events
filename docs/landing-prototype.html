@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utsava — All-in-One Event Management | Food, Grocery, Cooks & Decor</title>
+  <meta name="description" content="We handle everything — groceries, traditional cooks, catering and decoration. Estimate your event cost instantly and book via WhatsApp." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Extend Tailwind theme with our warm, premium palette
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: { deep: '#065f46' },
+            amber: { deep: '#b45309' },
+          },
+          fontFamily: {
+            display: ['Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Playfair Display', Georgia, serif; }
+    /* Subtle warm gradient backdrop for the hero */
+    .hero-bg {
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(180, 83, 9, 0.18), transparent 60%),
+        radial-gradient(900px 500px at 0% 20%, rgba(6, 95, 70, 0.16), transparent 55%),
+        linear-gradient(160deg, #fffdf8 0%, #fdf7ec 100%);
+    }
+    /* Custom styled range slider */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #065f46, #b45309);
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: #fff;
+      border: 3px solid #065f46;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: #fff;
+      border: 3px solid #065f46;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/80 border-b border-amber-100">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <span class="grid place-items-center w-9 h-9 rounded-lg bg-emerald-800 text-white font-display font-bold">U</span>
+        <span class="font-display text-xl font-bold text-emerald-900">Utsava Events</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#estimator" class="hover:text-emerald-800 transition">Estimator</a>
+        <a href="#services" class="hover:text-emerald-800 transition">Services</a>
+        <a href="#estimator"
+           class="px-4 py-2 rounded-full bg-emerald-800 text-white hover:bg-emerald-900 transition shadow-sm">
+          Get an Estimate
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="top" class="hero-bg">
+    <div class="max-w-6xl mx-auto px-5 py-20 md:py-28 text-center">
+      <span class="inline-block mb-5 px-4 py-1.5 rounded-full bg-amber-100 text-amber-800 text-xs font-semibold tracking-wide uppercase">
+        Groceries · Cooks · Catering · Decor
+      </span>
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-emerald-950 max-w-4xl mx-auto">
+        We Handle Everything—Groceries, Cooks, &amp; Decor.
+        <span class="text-amber-700"> You Just Enjoy.</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+        One team for your entire celebration — from the first grocery run to the final floral centerpiece.
+        No juggling vendors. No stress. Just a beautiful event.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#estimator"
+           class="px-8 py-4 rounded-full bg-amber-600 text-white text-lg font-semibold shadow-lg shadow-amber-600/25 hover:bg-amber-700 hover:-translate-y-0.5 transition">
+          Estimate Your Event Cost →
+        </a>
+        <a href="#services"
+           class="px-8 py-4 rounded-full bg-white text-emerald-900 text-lg font-semibold border border-emerald-200 hover:border-emerald-400 transition">
+          See What We Do
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-slate-500">Trusted for Marriages · Naming Ceremonies · Housewarmings · Birthdays</p>
+    </div>
+  </section>
+
+  <!-- ================= COST ESTIMATOR ================= -->
+  <section id="estimator" class="py-20 bg-slate-50 border-y border-slate-100">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-emerald-950">Estimate Your Event Cost</h2>
+        <p class="mt-3 text-slate-600 max-w-xl mx-auto">Adjust the options below and watch your estimate update instantly. No sign-up needed.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8 items-start">
+
+        <!-- ----- FORM (left, 3 cols) ----- -->
+        <form id="estimatorForm" class="lg:col-span-3 bg-white rounded-2xl shadow-sm border border-slate-100 p-6 md:p-8 space-y-7">
+
+          <!-- Event Type -->
+          <div>
+            <label for="eventType" class="block text-sm font-semibold text-slate-700 mb-2">Event Type</label>
+            <select id="eventType"
+                    class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none bg-white">
+              <option value="Marriage">Marriage</option>
+              <option value="Naming Ceremony">Naming Ceremony</option>
+              <option value="Housewarming">Housewarming</option>
+              <option value="Birthday Party">Birthday Party</option>
+            </select>
+          </div>
+
+          <!-- Guest Count -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="guestCount" class="text-sm font-semibold text-slate-700">Guest Count</label>
+              <span class="text-sm font-bold text-emerald-800"><span id="guestCountLabel">300</span> guests</span>
+            </div>
+            <input type="range" id="guestCount" min="50" max="2000" step="10" value="300" class="w-full" />
+            <div class="flex justify-between text-xs text-slate-400 mt-1">
+              <span>50</span><span>2000</span>
+            </div>
+          </div>
+
+          <!-- Catering Style -->
+          <div>
+            <label for="cateringStyle" class="block text-sm font-semibold text-slate-700 mb-2">Catering Style</label>
+            <select id="cateringStyle"
+                    class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none bg-white">
+              <!-- value = per-plate cost in ₹ -->
+              <option value="300" data-name="Standard Veg">Standard Veg — ₹300 / plate</option>
+              <option value="450" data-name="Premium Veg">Premium Veg — ₹450 / plate</option>
+              <option value="500" data-name="Traditional Kodava Non-Veg Special">Traditional Kodava Non-Veg Special — ₹500 / plate</option>
+            </select>
+          </div>
+
+          <!-- Decoration Tier -->
+          <div>
+            <label for="decorTier" class="block text-sm font-semibold text-slate-700 mb-2">Decoration Tier</label>
+            <select id="decorTier"
+                    class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none bg-white">
+              <!-- value = flat cost in ₹ -->
+              <option value="25000" data-name="Basic Traditional">Basic Traditional — ₹25,000</option>
+              <option value="60000" data-name="Elegant Floral">Elegant Floral — ₹60,000</option>
+              <option value="150000" data-name="Grand Royal Palace">Grand Royal Palace — ₹1,50,000</option>
+            </select>
+          </div>
+
+          <!-- Add-ons -->
+          <div>
+            <span class="block text-sm font-semibold text-slate-700 mb-3">Extra Add-ons</span>
+            <div class="grid sm:grid-cols-3 gap-3">
+              <!-- data-cost = flat cost in ₹ -->
+              <label class="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 cursor-pointer hover:border-emerald-400 transition">
+                <input type="checkbox" class="addon w-4 h-4 accent-emerald-700" data-name="Professional Photography" data-cost="40000" />
+                <span class="text-sm">📸 Photography <span class="block text-xs text-slate-400">₹40,000</span></span>
+              </label>
+              <label class="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 cursor-pointer hover:border-emerald-400 transition">
+                <input type="checkbox" class="addon w-4 h-4 accent-emerald-700" data-name="Sound System & DJ" data-cost="30000" />
+                <span class="text-sm">🎵 Sound &amp; DJ <span class="block text-xs text-slate-400">₹30,000</span></span>
+              </label>
+              <label class="flex items-center gap-3 rounded-xl border border-slate-200 px-4 py-3 cursor-pointer hover:border-emerald-400 transition">
+                <input type="checkbox" class="addon w-4 h-4 accent-emerald-700" data-name="Traditional Dancers" data-cost="35000" />
+                <span class="text-sm">💃 Dancers <span class="block text-xs text-slate-400">₹35,000</span></span>
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <!-- ----- SUMMARY (right, 2 cols) ----- -->
+        <aside class="lg:col-span-2 lg:sticky lg:top-24">
+          <div class="rounded-2xl bg-emerald-900 text-white shadow-xl overflow-hidden">
+            <div class="px-6 pt-6 pb-4 border-b border-emerald-700/60">
+              <h3 class="font-display text-2xl font-bold">Your Event Summary</h3>
+              <p class="text-emerald-200 text-sm mt-1">Live estimate — updates as you choose.</p>
+            </div>
+
+            <!-- Line items rendered by JS -->
+            <dl id="summaryList" class="px-6 py-5 space-y-3 text-sm"></dl>
+
+            <!-- Total -->
+            <div class="px-6 py-5 bg-emerald-950/50 border-t border-emerald-700/60">
+              <div class="flex items-end justify-between">
+                <span class="text-emerald-200 text-sm">Estimated Total Cost</span>
+                <span id="totalCost" class="font-display text-3xl font-extrabold text-amber-300">₹0</span>
+              </div>
+              <p class="text-xs text-emerald-300/80 mt-2">Indicative only. Final quote confirmed after consultation.</p>
+            </div>
+
+            <!-- WhatsApp checkout -->
+            <div class="px-6 pb-6">
+              <button type="button" id="whatsappBtn"
+                      class="w-full flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-lg transition shadow-lg">
+                <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Book &amp; Send via WhatsApp
+              </button>
+              <p class="text-center text-xs text-emerald-300/70 mt-3">We reply within business hours. No payment now.</p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES GRID ================= -->
+  <section id="services" class="py-20">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-emerald-950">What We Bring to the Table</h2>
+        <p class="mt-3 text-slate-600 max-w-xl mx-auto">Four pillars that cover every corner of your celebration.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1 -->
+        <div class="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-emerald-100 text-2xl mb-4">🍲</div>
+          <h3 class="font-semibold text-lg text-emerald-950">Full-Scale Catering &amp; Specialized Cooks</h3>
+          <p class="mt-2 text-sm text-slate-600">Handling everything from traditional regional dishes to international buffets.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-amber-100 text-2xl mb-4">🛒</div>
+          <h3 class="font-semibold text-lg text-emerald-950">Wholesale Grocery Management</h3>
+          <p class="mt-2 text-sm text-slate-600">We buy, transport, and manage inventory—zero wastage for you.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-emerald-100 text-2xl mb-4">🌸</div>
+          <h3 class="font-semibold text-lg text-emerald-950">Theme &amp; Floral Decoration</h3>
+          <p class="mt-2 text-sm text-slate-600">Stage, entrance, and seating decor tailored to the event.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="group rounded-2xl border border-slate-100 bg-white p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition">
+          <div class="w-12 h-12 grid place-items-center rounded-xl bg-amber-100 text-2xl mb-4">📋</div>
+          <h3 class="font-semibold text-lg text-emerald-950">Complete On-Site Supervision</h3>
+          <p class="mt-2 text-sm text-slate-600">An event manager on the ground so you don't have to stress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-emerald-950 text-emerald-100">
+    <div class="max-w-6xl mx-auto px-5 py-12 grid sm:grid-cols-2 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="grid place-items-center w-9 h-9 rounded-lg bg-amber-600 text-white font-display font-bold">U</span>
+          <span class="font-display text-xl font-bold">Utsava Events</span>
+        </div>
+        <p class="text-sm text-emerald-300 max-w-sm">All-in-one event management — groceries, cooks, catering and decoration under one roof.</p>
+      </div>
+      <div class="sm:text-right">
+        <p class="text-sm text-emerald-300">Ready to plan your day?</p>
+        <a href="#estimator" class="inline-block mt-2 px-6 py-3 rounded-full bg-amber-600 hover:bg-amber-700 text-white font-semibold transition">Estimate Your Event</a>
+        <p class="mt-6 text-xs text-emerald-400/70">© <span id="year"></span> Utsava Events. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a id="floatingWhatsapp" href="#" target="_blank" rel="noopener"
+     aria-label="Chat with us on WhatsApp"
+     class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-xl hover:scale-110 transition">
+    <svg viewBox="0 0 24 24" class="w-8 h-8 fill-white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    /* =====================================================================
+       CONFIG
+       Replace WHATSAPP_NUMBER with the business number in international
+       format, digits only, no "+" or spaces. e.g. India: 919812345678
+    ===================================================================== */
+    const WHATSAPP_NUMBER = 'YOUR_PHONE_NUMBER';
+
+    // --- Grab all interactive elements ---
+    const eventType     = document.getElementById('eventType');
+    const guestCount    = document.getElementById('guestCount');
+    const guestLabel    = document.getElementById('guestCountLabel');
+    const cateringStyle = document.getElementById('cateringStyle');
+    const decorTier     = document.getElementById('decorTier');
+    const addons        = document.querySelectorAll('.addon');
+    const summaryList   = document.getElementById('summaryList');
+    const totalCostEl   = document.getElementById('totalCost');
+    const whatsappBtn   = document.getElementById('whatsappBtn');
+
+    // Format a number as Indian Rupees (₹1,23,456)
+    const inr = (n) => '₹' + n.toLocaleString('en-IN');
+
+    /* ---------------------------------------------------------------
+       readState(): read every form value and compute the running total.
+       Returns a plain object we can use both for rendering the summary
+       and for building the WhatsApp message — single source of truth.
+    --------------------------------------------------------------- */
+    function readState() {
+      const guests      = parseInt(guestCount.value, 10);
+      const plateCost   = parseInt(cateringStyle.value, 10);
+      const cateringName = cateringStyle.selectedOptions[0].dataset.name;
+      const decorCost   = parseInt(decorTier.value, 10);
+      const decorName   = decorTier.selectedOptions[0].dataset.name;
+
+      // Catering scales with guest count; decor is a flat tier fee.
+      const cateringTotal = plateCost * guests;
+
+      // Collect the checked add-ons and their flat costs.
+      const selectedAddons = [];
+      let addonsTotal = 0;
+      addons.forEach((box) => {
+        if (box.checked) {
+          const cost = parseInt(box.dataset.cost, 10);
+          selectedAddons.push({ name: box.dataset.name, cost });
+          addonsTotal += cost;
+        }
+      });
+
+      const total = cateringTotal + decorCost + addonsTotal;
+
+      return {
+        eventType: eventType.value,
+        guests,
+        cateringName, plateCost, cateringTotal,
+        decorName, decorCost,
+        selectedAddons, addonsTotal,
+        total,
+      };
+    }
+
+    /* ---------------------------------------------------------------
+       render(): paint the summary box + live total from current state.
+    --------------------------------------------------------------- */
+    function render() {
+      const s = readState();
+
+      // Keep the slider's visible label in sync.
+      guestLabel.textContent = s.guests;
+
+      // Build the summary line items.
+      const addonsRows = s.selectedAddons.length
+        ? s.selectedAddons
+            .map((a) => row(a.name, inr(a.cost)))
+            .join('')
+        : row('Add-ons', 'None', true);
+
+      summaryList.innerHTML =
+        row('Event', s.eventType) +
+        row('Guests', s.guests + ' people') +
+        row(`Catering — ${s.cateringName}`, inr(s.cateringTotal)) +
+        row(`  (${inr(s.plateCost)} × ${s.guests} plates)`, '', true) +
+        row(`Decoration — ${s.decorName}`, inr(s.decorCost)) +
+        addonsRows;
+
+      totalCostEl.textContent = inr(s.total);
+    }
+
+    // Helper: one summary row. `muted` renders smaller, secondary text.
+    function row(label, value, muted = false) {
+      if (muted) {
+        return `<div class="flex justify-between text-emerald-300/70 text-xs"><dt>${label}</dt><dd>${value}</dd></div>`;
+      }
+      return `<div class="flex justify-between gap-4"><dt class="text-emerald-100">${label}</dt><dd class="font-semibold text-white whitespace-nowrap">${value}</dd></div>`;
+    }
+
+    /* ---------------------------------------------------------------
+       buildWhatsAppMessage(): format the state into a clean, emoji-rich
+       text summary. This is the string the customer sends us.
+    --------------------------------------------------------------- */
+    function buildWhatsAppMessage() {
+      const s = readState();
+
+      // Each add-on on its own bullet line; fall back to "None".
+      const addonLines = s.selectedAddons.length
+        ? s.selectedAddons.map((a) => `   • ${a.name} (${inr(a.cost)})`).join('\n')
+        : '   • None';
+
+      // Plain-text, human-readable message with line breaks and emojis.
+      // \n line breaks survive encodeURIComponent and render in WhatsApp.
+      return (
+`🎉 *New Event Enquiry — Utsava Events*
+
+📅 *Event Type:* ${s.eventType}
+👥 *Guests:* ${s.guests}
+
+🍽️ *Catering:* ${s.cateringName}
+   ${inr(s.plateCost)} × ${s.guests} plates = ${inr(s.cateringTotal)}
+
+🌸 *Decoration:* ${s.decorName} (${inr(s.decorCost)})
+
+✨ *Add-ons:*
+${addonLines}
+
+💰 *Estimated Total: ${inr(s.total)}*
+
+Please share availability and a detailed quote. Thank you!`
+      );
+    }
+
+    /* ---------------------------------------------------------------
+       WhatsApp checkout:
+       1. Build the readable message.
+       2. encodeURIComponent() to make it URL-safe (spaces, emojis,
+          line breaks all become %XX sequences).
+       3. Open wa.me/<number>?text=<encoded> in a new tab.
+    --------------------------------------------------------------- */
+    whatsappBtn.addEventListener('click', () => {
+      const message = buildWhatsAppMessage();
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    });
+
+    // Floating general-inquiry button — a fixed, simple pre-filled message.
+    const floatingMsg = 'Hi, I have a quick question about your event management services.';
+    document.getElementById('floatingWhatsapp').href =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(floatingMsg)}`;
+
+    // --- Wire up live updates on every input change ---
+    [eventType, guestCount, cateringStyle, decorTier].forEach((el) =>
+      el.addEventListener('input', render)
+    );
+    addons.forEach((box) => box.addEventListener('change', render));
+
+    // Footer year + initial paint.
+    document.getElementById('year').textContent = new Date().getFullYear();
+    render();
+  </script>
+</body>
+</html>

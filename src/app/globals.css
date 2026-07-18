@@ -1,0 +1,246 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --font-display: var(--font-display);
+  --color-brand-emerald: var(--brand-emerald);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-deep: var(--brand-gold-deep);
+  /* Back-compat alias — resolves to the luminous gold. */
+  --color-brand-amber: var(--brand-gold);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* ---- Emerald & Royal Gold ---- */
+  --background: #fbf7ef; /* warm ivory */
+  --foreground: #14231f; /* near-black green ink */
+  --card: #ffffff;
+  --card-foreground: #14231f;
+  --popover: #ffffff;
+  --popover-foreground: #14231f;
+  /* Deep emerald primary (#064E3B) */
+  --primary: #064e3b;
+  --primary-foreground: #fbf7ef;
+  --secondary: #efe9db; /* warm sand */
+  --secondary-foreground: #064e3b;
+  --muted: #f1ebdd;
+  --muted-foreground: #5b6660;
+  /* Soft gold accent tint (badges, chips) */
+  --accent: #f7eac6;
+  --accent-foreground: #6b5410;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e7dfce;
+  --input: #e7dfce;
+  --ring: #064e3b;
+  --chart-1: #0e6e52;
+  --chart-2: #d6a419;
+  --chart-3: #064e3b;
+  --chart-4: #c99a2e;
+  --chart-5: #0a3d30;
+  --radius: 0.75rem;
+  /* Brand tokens */
+  --brand-emerald: #064e3b;
+  --brand-gold: #d6a419; /* luminous gold — for use on the dark emerald card */
+  --brand-gold-deep: #a9781a; /* deeper bronze-gold — legible on light ivory */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  /* ---- Emerald & Royal Gold — dark ---- */
+  --background: #0a1611; /* dark green-black */
+  --foreground: #eae4d4; /* warm ivory */
+  --card: #10241c; /* dark emerald card */
+  --card-foreground: #eae4d4;
+  --popover: #10241c;
+  --popover-foreground: #eae4d4;
+  /* Rich emerald surface (footer, summary card, default buttons) */
+  --primary: #0d5a43;
+  --primary-foreground: #f5f0e2;
+  --secondary: #182e25; /* muted dark green */
+  --secondary-foreground: #d6e8df;
+  --muted: #16281f;
+  --muted-foreground: #9db0a6;
+  --accent: #2c2614; /* dark gold tint */
+  --accent-foreground: #ecc766;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: #26382f;
+  --input: #223228;
+  --ring: #caa53a; /* gold focus ring */
+  --chart-1: #35c690;
+  --chart-2: #e8c15a;
+  --chart-3: #0d5a43;
+  --chart-4: #caa53a;
+  --chart-5: #1f7d5e;
+  --sidebar: #10241c;
+  --sidebar-foreground: #eae4d4;
+  --sidebar-primary: #35c690;
+  --sidebar-primary-foreground: #0a1611;
+  --sidebar-accent: #182e25;
+  --sidebar-accent-foreground: #eae4d4;
+  --sidebar-border: #26382f;
+  --sidebar-ring: #caa53a;
+}
+
+.dark {
+  --brand-emerald: #34d399;
+  --brand-gold: #e8c15a;
+  --brand-gold-deep: #e8c15a;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
+  }
+  /* Hide scrollbars on horizontally-scrollable strips (mobile chip rows). */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Warm, premium hero backdrop */
+  .hero-bg {
+    background:
+      radial-gradient(1200px 500px at 85% -10%, oklch(0.8 0.12 88 / 0.2), transparent 60%),
+      radial-gradient(900px 500px at 0% 15%, oklch(0.42 0.09 165 / 0.14), transparent 55%),
+      linear-gradient(160deg, oklch(0.995 0.006 90) 0%, oklch(0.975 0.02 88) 100%);
+  }
+  .dark .hero-bg {
+    background:
+      radial-gradient(1200px 500px at 85% -10%, oklch(0.8 0.12 88 / 0.16), transparent 60%),
+      radial-gradient(900px 500px at 0% 15%, oklch(0.5 0.1 165 / 0.2), transparent 55%),
+      linear-gradient(160deg, oklch(0.22 0.03 165) 0%, oklch(0.17 0.02 165) 100%);
+  }
+}
+/* ------------------------------------------------------------------ */
+/* Motion primitives                                                   */
+/* ------------------------------------------------------------------ */
+@keyframes float-blob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0) scale(1.06);
+  }
+}
+
+@keyframes float-blob-alt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(16px, 18px, 0) scale(1.08);
+  }
+}
+
+@keyframes gold-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@layer utilities {
+  .animate-float-blob {
+    animation: float-blob 9s ease-in-out infinite;
+  }
+  .animate-float-blob-alt {
+    animation: float-blob-alt 11s ease-in-out infinite;
+  }
+  /* Animated gold gradient text (used on the hero accent word). */
+  .text-gold-shimmer {
+    background-image: linear-gradient(
+      100deg,
+      var(--brand-gold-deep) 0%,
+      var(--brand-gold) 35%,
+      #f4d98a 50%,
+      var(--brand-gold) 65%,
+      var(--brand-gold-deep) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gold-shimmer 5s linear infinite;
+  }
+}
+
+/* Respect reduced-motion: freeze the looping decorative animations. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-blob,
+  .animate-float-blob-alt,
+  .text-gold-shimmer {
+    animation: none;
+  }
+  .text-gold-shimmer {
+    background-position: center;
+  }
+}
