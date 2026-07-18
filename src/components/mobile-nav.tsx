@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Calculator,
+  Gift,
   Home,
   MapPin,
   UtensilsCrossed,
@@ -24,6 +25,7 @@ const ITEMS: NavItem[] = [
   { href: "/menu", label: "Menu", icon: UtensilsCrossed, match: (p) => p.startsWith("/menu") },
   { href: "/#estimator", label: "Estimate", icon: Calculator, match: () => false, primary: true },
   { href: "/coorg", label: "Coorg", icon: MapPin, match: (p) => p.startsWith("/coorg") },
+  { href: "/gifts", label: "Gifts", icon: Gift, match: (p) => p.startsWith("/gifts") },
 ];
 
 export function MobileNav() {
@@ -34,7 +36,7 @@ export function MobileNav() {
       aria-label="Primary"
       className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur sm:hidden"
     >
-      <ul className="mx-auto grid max-w-md grid-cols-4 items-center px-1 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-1.5">
+      <ul className="mx-auto grid max-w-md grid-cols-5 items-center px-1 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-1.5">
         {ITEMS.map((item) => {
           const active = item.match(pathname);
           const Icon = item.icon;

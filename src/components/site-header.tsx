@@ -20,7 +20,9 @@ const LINKS: NavLink[] = [
   { href: "/", label: "Home", active: (p) => p === "/" },
   { href: "/menu", label: "Menu", active: (p) => p.startsWith("/menu") },
   { href: "/coorg", label: "Coorg Guide", active: (p) => p.startsWith("/coorg") },
+  { href: "/gifts", label: "Gifts", active: (p) => p.startsWith("/gifts") },
   { href: "/#estimator", label: "Estimator" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function SiteHeader() {

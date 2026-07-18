@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero";
 import { Estimator } from "@/components/estimator";
 import { MenuPreview } from "@/components/menu-preview";
 import { ServicesGrid } from "@/components/services-grid";
+import { ContactSection } from "@/components/contact-section";
 import { SayTheWord } from "@/components/say-the-word";
 
 export default function HomePage() {
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Estimator />
       <MenuPreview />
       <ServicesGrid />
+      <ContactSection />
       <SayTheWord />
     </>
   );
