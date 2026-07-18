@@ -3,7 +3,7 @@
 // ⚠️  Set WHATSAPP_NUMBER to the business number in international format —
 //     country code + number, digits only (no "+", spaces or dashes).
 //     Example (India): "919812345678"
-export const WHATSAPP_NUMBER = "YOUR_PHONE_NUMBER";
+export const WHATSAPP_NUMBER = "918217610195";
 
 export const SITE = {
   name: "Mehfil Events",
