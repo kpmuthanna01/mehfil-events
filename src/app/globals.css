@@ -14,7 +14,7 @@
   --color-brand-emerald: var(--brand-emerald);
   --color-brand-gold: var(--brand-gold);
   --color-brand-gold-deep: var(--brand-gold-deep);
-  /* Back-compat alias — resolves to the luminous gold. */
+  /* Back-compat alias - resolves to the luminous gold. */
   --color-brand-amber: var(--brand-gold);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -84,8 +84,8 @@
   --radius: 0.75rem;
   /* Brand tokens */
   --brand-emerald: #064e3b;
-  --brand-gold: #d6a419; /* luminous gold — for use on the dark emerald card */
-  --brand-gold-deep: #a9781a; /* deeper bronze-gold — legible on light ivory */
+  --brand-gold: #d6a419; /* luminous gold - for use on the dark emerald card */
+  --brand-gold-deep: #a9781a; /* deeper bronze-gold - legible on light ivory */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -97,7 +97,7 @@
 }
 
 .dark {
-  /* ---- Emerald & Royal Gold — dark ---- */
+  /* ---- Emerald & Royal Gold - dark ---- */
   --background: #0a1611; /* dark green-black */
   --foreground: #eae4d4; /* warm ivory */
   --card: #10241c; /* dark emerald card */

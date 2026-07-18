@@ -2,12 +2,12 @@ import { NextResponse } from "next/server";
 import { createBooking, listBookings } from "@/lib/store";
 import { validateCreateBooking } from "@/lib/validate";
 
-// GET /api/bookings — list all bookings (newest first).
+// GET /api/bookings - list all bookings (newest first).
 export async function GET() {
   return NextResponse.json({ bookings: listBookings() });
 }
 
-// POST /api/bookings — create a booking from a validated selection.
+// POST /api/bookings - create a booking from a validated selection.
 export async function POST(request: Request) {
   let body: unknown;
   try {

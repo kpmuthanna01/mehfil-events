@@ -1,4 +1,4 @@
-// Brand logo mark — a self-contained SVG so it renders identically on light
+// Brand logo mark - a self-contained SVG so it renders identically on light
 // (ivory) and dark (emerald) backgrounds. A four-point "celebration spark" on a
 // deep-emerald tile with a gold hairline: festive, elegant and secular.
 export function Logo({
@@ -15,7 +15,7 @@ export function Logo({
       viewBox="0 0 48 48"
       fill="none"
       role="img"
-      aria-label="Mehfil Events logo"
+      aria-label="Mehfil Coorg logo"
       className={className}
     >
       <rect

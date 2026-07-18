@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getBooking } from "@/lib/store";
 
-// GET /api/bookings/:id — fetch a single booking by its reference id.
+// GET /api/bookings/:id - fetch a single booking by its reference id.
 export async function GET(
   _request: Request,
   { params }: { params: Promise<{ id: string }> },

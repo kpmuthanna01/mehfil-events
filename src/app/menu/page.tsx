@@ -6,7 +6,7 @@ import { MenuShowcase } from "@/components/menu-showcase";
 import { RegionalMenus } from "@/components/regional-menus";
 
 export const metadata: Metadata = {
-  title: "Menus | Mehfil Events",
+  title: "Menus | Mehfil Coorg",
   description:
     "Explore our detailed catering menus plus full regional spreads, Karnataka, Coorg and Kerala style, vegetarian and non-vegetarian. Fully customisable for your event.",
 };

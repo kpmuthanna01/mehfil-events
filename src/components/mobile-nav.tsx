@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import {
   Calculator,
   Home,
-  Star,
+  MapPin,
   UtensilsCrossed,
   type LucideIcon,
 } from "lucide-react";
@@ -23,7 +23,7 @@ const ITEMS: NavItem[] = [
   { href: "/", label: "Home", icon: Home, match: (p) => p === "/" },
   { href: "/menu", label: "Menu", icon: UtensilsCrossed, match: (p) => p.startsWith("/menu") },
   { href: "/#estimator", label: "Estimate", icon: Calculator, match: () => false, primary: true },
-  { href: "/#testimonials", label: "Reviews", icon: Star, match: () => false },
+  { href: "/coorg", label: "Coorg", icon: MapPin, match: (p) => p.startsWith("/coorg") },
 ];
 
 export function MobileNav() {
@@ -34,7 +34,7 @@ export function MobileNav() {
       aria-label="Primary"
       className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/95 backdrop-blur sm:hidden"
     >
-      <ul className="mx-auto grid max-w-md grid-cols-4 items-center px-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-1.5">
+      <ul className="mx-auto grid max-w-md grid-cols-4 items-center px-1 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-1.5">
         {ITEMS.map((item) => {
           const active = item.match(pathname);
           const Icon = item.icon;
@@ -46,7 +46,7 @@ export function MobileNav() {
                 aria-current={active ? "page" : undefined}
                 aria-label={item.label}
                 className={cn(
-                  "group flex flex-col items-center gap-1 rounded-lg px-3 py-1.5 transition-colors",
+                  "group flex flex-col items-center gap-1 rounded-lg px-1.5 py-1.5 transition-colors",
                   item.primary
                     ? "text-brand-gold-deep"
                     : active

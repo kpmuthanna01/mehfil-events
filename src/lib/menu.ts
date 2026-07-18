@@ -3,7 +3,7 @@ import type { CateringId } from "./pricing";
 // =============================================================================
 // DETAILED MENUS
 // A representative menu for each catering style. Real spreads are customised
-// per event during consultation — these show the breadth on offer.
+// per event during consultation; these show the breadth on offer.
 // =============================================================================
 
 export interface MenuSection {
@@ -98,8 +98,8 @@ export const MENUS: Record<CateringId, Menu> = {
     sections: [
       { title: "Welcome & Beverages", items: ["Signature Mocktail Bar", "Fresh Juices", "Tea / Coffee Station"] },
       { title: "Live Counters", items: ["Chaat Counter", "Pasta Station", "Dosa & Appam", "Tandoor Live Grill", "Pan-Asian Wok"] },
-      { title: "Indian — Veg", items: ["Paneer Lababdar", "Dal Makhani", "Veg Biryani", "Assorted Breads"] },
-      { title: "Indian — Non-Veg", items: ["Chicken Biryani", "Mutton Curry", "Fish Amritsari", "Butter Chicken"] },
+      { title: "Indian (Veg)", items: ["Paneer Lababdar", "Dal Makhani", "Veg Biryani", "Assorted Breads"] },
+      { title: "Indian (Non-Veg)", items: ["Chicken Biryani", "Mutton Curry", "Fish Amritsari", "Butter Chicken"] },
       { title: "Continental", items: ["Grilled Veg / Fish", "Herb Roast Chicken", "Au Gratin", "Garden Salads"] },
       { title: "Pan-Asian", items: ["Thai Green Curry", "Hakka Noodles", "Chilli Garlic Prawns", "Fried Rice"] },
       { title: "Dessert Studio", items: ["Live Jalebi", "Cheesecake & Pastries", "Ice-Cream Bar", "Assorted Indian Sweets"] },

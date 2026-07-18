@@ -6,7 +6,7 @@ import type { Booking, BookingStatus, CreateBookingInput } from "./types";
 // IN-MEMORY BOOKING STORE
 // A lightweight prototype store. Data lives in module memory and resets when the
 // server restarts. We stash it on `globalThis` so Next.js dev hot-reloads don't
-// wipe it between edits. Swap this file for a real DB (Prisma) later — the API
+// wipe it between edits. Swap this file for a real DB (Prisma) later - the API
 // surface (create/list/get/updateStatus) stays the same.
 // =============================================================================
 

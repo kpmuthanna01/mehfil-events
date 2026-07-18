@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { TrackBooking } from "@/components/track-booking";
 
 export const metadata: Metadata = {
-  title: "Track Booking | Mehfil Events",
+  title: "Track Booking | Mehfil Coorg",
   description: "Look up your event booking status by reference.",
 };
 

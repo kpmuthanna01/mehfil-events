@@ -33,8 +33,8 @@ export function buildWhatsAppMessage(
       : "   • None";
 
   const header = contact?.reference
-    ? `*Booking ${contact.reference} | Mehfil Events*`
-    : "*New Event Enquiry | Mehfil Events*";
+    ? `*Booking ${contact.reference} | Mehfil Coorg*`
+    : "*New Event Enquiry | Mehfil Coorg*";
 
   const contactLines = [
     contact?.name ? `🙍 *Name:* ${contact.name}` : "",

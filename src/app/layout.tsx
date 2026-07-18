@@ -20,9 +20,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Mehfil Events | Where Every Celebration Comes Together",
+  title: "Mehfil Coorg | Events & Escapes",
   description:
-    "All-in-one event management for weddings, ceremonies, corporate & more. Groceries, cooks, catering and decoration under one roof. Estimate your cost and book online.",
+    "All-in-one event management in Coorg, weddings, ceremonies, corporate and more, plus a complete Coorg travel guide. Groceries, cooks, catering and decoration under one roof.",
 };
 
 export default function RootLayout({
